@@ -1,0 +1,38 @@
+{
+  "name": "@company/admin-panel",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@company/shared-api": "workspace:*",
+    "@company/shared-auth": "workspace:*",
+    "@company/shared-config": "workspace:*",
+    "@company/shared-hooks": "workspace:*",
+    "@company/shared-types": "workspace:*",
+    "@company/shared-ui": "workspace:*",
+    "@company/shared-utils": "workspace:*",
+    "@company/shared-validation": "workspace:*",
+    "@hookform/resolvers": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "react-hook-form": "catalog:",
+    "react-router": "catalog:",
+    "zustand": "catalog:"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
+  }
+}

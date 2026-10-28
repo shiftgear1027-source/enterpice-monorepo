@@ -1,0 +1,17 @@
+node_modules
+dist
+build
+coverage
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.vite
+.turbo
+.DS_Store
+npm-debug.log*
+pnpm-debug.log*
+.idea
+.vscode/*
+!.vscode/extensions.json
+*.local

@@ -1,0 +1,36 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+
+# Single source of truth for third-party dependency versions.
+# Every package.json references these with the `catalog:` protocol.
+catalog:
+  # runtime
+  react: ^19.2.0
+  react-dom: ^19.2.0
+  react-router: ^7.9.0
+  axios: ^1.12.0
+  zustand: ^5.0.8
+  react-hook-form: ^7.62.0
+  '@hookform/resolvers': ^5.2.0
+  zod: ^4.1.0
+  # build / styling
+  vite: ^7.1.0
+  '@vitejs/plugin-react': ^5.0.0
+  tailwindcss: ^4.1.0
+  '@tailwindcss/vite': ^4.1.0
+  # typing
+  typescript: ^5.9.0
+  '@types/react': ^19.2.0
+  '@types/react-dom': ^19.2.0
+  # code quality (consumed by the root workspace)
+  eslint: ^9.35.0
+  '@eslint/js': ^9.35.0
+  typescript-eslint: ^8.44.0
+  eslint-plugin-react-hooks: ^5.2.0
+  globals: ^16.4.0
+  prettier: ^3.6.0
+
+onlyBuiltDependencies:
+  - esbuild
+  - '@tailwindcss/oxide'

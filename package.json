@@ -1,0 +1,36 @@
+{
+  "name": "enterprise-react-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=20.19.0",
+    "pnpm": ">=10.12.0"
+  },
+  "scripts": {
+    "dev:admin": "pnpm build:packages && pnpm --filter @company/admin-panel dev",
+    "dev:user": "pnpm build:packages && pnpm --filter @company/user-panel dev",
+    "dev:packages": "pnpm --filter \"./packages/*\" --parallel dev",
+    "build:packages": "pnpm --filter \"./packages/*\" build",
+    "build:admin": "pnpm build:packages && pnpm --filter @company/admin-panel build",
+    "build:user": "pnpm build:packages && pnpm --filter @company/user-panel build",
+    "build": "pnpm build:packages && pnpm --filter \"./apps/*\" build",
+    "typecheck": "pnpm build:packages && pnpm --filter \"./apps/*\" typecheck",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "clean": "pnpm -r clean && rm -rf node_modules"
+  },
+  "prettier": "./config/prettier/index.json",
+  "devDependencies": {
+    "@eslint/js": "catalog:",
+    "eslint": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
+    "globals": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:"
+  }
+}

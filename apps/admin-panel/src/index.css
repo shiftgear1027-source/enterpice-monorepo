@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+@import '@company/shared-ui/theme.css';
+@source '../../../packages/shared-ui/src';
+
+body {
+  @apply bg-slate-50 font-sans text-slate-900 antialiased;
+}
